@@ -5,7 +5,7 @@
 
 # @comm is default communicator defined in script runner
 #
-factory_id = "my_magic"
+factory_id = "factory_1"
 factory_topic = @comm.get_topic(factory_id)
 
 factory_topic.on_message lambda {|m| m.operation == :inform && m.read_content('inform_type') == 'FAILED' } do |message|
